@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>浏览器宽高</title>
+</head>
+<style>
+	p{
+		height:30px;
+		line-height: 30px;
+		padding: 20px;
+		border: 4px solid #eee;
+		width:800px;
+		height:100%;
+		margin:10px auto;
+		border-radius: 20px;
+		
+	}
+</style>
+<body>
+	<p>
+		1:window对象的宽高:window.innerHeight  window.outerHeight  window.innerWidth  window.outerWidth
+
+inner指的是打开的浏览器窗口的可视宽高,包括滚动条但不包括项目栏这些,outer是整个窗口的高度.全屏的时候就是screen.height.tips:随着窗口大小的调整这四个值会改变.调整窗口用resizeBy()和resizeTo();ie8以下不支持这四个值,同时使用下面第三点里面的document.documentElement(html tag) 或 document.body (body tag)（与 IE 的版本相关）的 clientWidth 和 clientHeight 属性替代inner的两个值而outer的两个值没有替代属性.兼容写法是:var height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight.
+
+2,显示器的宽高:screen.height  screen.width  screen.availHeight  screen.availWidth  screenTop  screenLeft
+
+screen.height:返回浏览器窗口可占用的最大宽度,全屏模式下是显示器的宽高,如果有系统的任务栏可能就要减掉这个的宽高.和操作系统有关.
+
+screen.availHeight,screen.availWidth:浏览器窗口可以在屏幕上占用的最大宽高.这个和浏览器以及操作系统的实现有很大的关系.在mac下面是screen.height减去任务栏的高度.
+
+screenTop和screenLeft:这两个值是浏览器窗口距离屏幕左边和上班的距离,如果浏览器全屏,为0.
+
+3,dom元素的宽高:client offset  scroll各有四个属性,一对宽高和一对上左.
+
+1.element.clientHeight:元素的内容加上padding的高度,和为了兼容ie的body和html标签的clientHeight是从document对象上继承的属性,最终作用于元素上面的.还有一对clientTop和clientLeft是用在代码里面读取元素边框,也就是border的宽度的作用.
+
+2.element.offsetHeight:整个元素内容可视区域的大小,包括边框和滚动条.offsetTop和offsetLeft有一个父节点,如果父节点没有进行absolute或者relative的css定位,则offsetparent是body元素,如果父元素有css定位,则offsetparent是该最近的父元素.在不同的浏览器中这个offset值不一样.火狐是最大的,父margon+父padding+子border+子margin;在chrome和ie8及以上,少了border,在ie8以下,还少了父margin.
+
+3.element.scrollHeight:元素内容的高度,包括溢出的部分.element.scrollTop:元素内容向上滚动了多少像素,没滚动则为0.可以用来生成滚动条随内容滚动的效果.
+
+tips:宽度是同样的意义.所有DOM元素都有上述3大属性，只需要给它固定大小并设置overflow:scroll即可表现出来.最后,要处理这些宽高的问题,用jquery的封装方法来处理兼容性的问题.
+	</p>
+</body>
+<script>
+	console.log('innerHeight:'+innerHeight);
+	console.log('outerHeight:'+outerHeight);
+	console.log('screenheight:'+screen.height);
+	console.log('screenavailheight:'+screen.availHeight);
+	console.log('innerWidth:'+innerWidth);	
+	console.log('outerWidth:'+outerWidth);
+	console.log('screenwidth:'+screen.width);
+	console.log('screenavailwidth:'+screen.availWidth);
+	console.log('screentop:'+screenTop);
+	console.log('screenleft:'+screenLeft);
+	
+</script>
+</html>
