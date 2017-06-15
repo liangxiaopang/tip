@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>width and height 实战</title>
+</head>
+<body>
+	<div>
+		<p>
+			1,当页面滚动到一定地方,出来一部分内容,比如图片文字的部分加载.可以比较元素离浏览器可视窗口的高度和浏览器窗口本身的高度.如果前者小于后者,则加载执行.
+			var client=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight 这一大串获取的是浏览器窗口的可视高度.
+			要获取到元素离窗口可视的高度,本来可以用offsetTop和scrollTop,但是offsetTop存在兼容性问题,所有改用getBoundingClientRect()方法,该方法返回元素离可视窗口的位置,是一组集合,当计算边界矩形时，会考虑视口区域（或其他可滚动元素）内的滚动操作，也就是说，当滚动位置发生了改变，top和left属性值就会随之立即发生变化（因此，它们的值是相对于视口的，而不是绝对的）。如果不希望属性值随视口变化，那么只要给top、left属性值加上当前的滚动位置（通过window.scrollX和window.scrollY），这样就可以获取与当前的滚动位置无关的常量值。
+			var divtop=div.getBoundingClientRect().top;
+		当触发scroll事件的时候进行比较.
+		</p>
+		<p>
+			2,当页面滚动到底部的时候,加载一定量的内容出来,类似知乎的实现效果
+			
+		</p>
+	</div>
+</body>
+</html>
