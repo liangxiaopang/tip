@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登陆弹出窗口</title>
+	<style>
+	html,body,a{
+		margin:0;
+		padding: 0;
+		text-decoration: none;
+	}
+	#contain{
+		perspective: 800px;
+		perspective-origin: 50% 50%;
+		margin:20px auto;
+		overflow: hidden;
+
+	}
+	#pagegroup{
+		width:400px;
+		height:400px;
+		position: relative;
+		margin:0 auto;
+		transform-style: preserve-3d;
+		border-radius: 30px;
+
+	}
+	.page{
+		width:360px;
+		height: 360px;
+		padding: 20px;
+		position: absolute;
+		background-color: #000;
+		color:white;
+		font-weight: bold;
+		font-size: 360px;
+		line-height: 360px;
+		text-align:center;
+		border-radius: 40px;
+		box-shadow: 0 5px 5px #ccc;
+	}
+	#page1{
+		transform-origin: bottom;
+		transition:transform 1s ease;}
+	#page2,#page3,#page4,#page5,#page6{
+		transform-origin: bottom;
+		transition:transform 1s ease;
+		transform: rotateX(90deg);
+	}
+	#op{
+		margin:40px auto;
+		text-align: center;
+		padding-right:20px; 
+	}
+	</style>
+</head>
+<body>
+	<div id='contain'>
+		<div id='pagegroup'>
+			<div class="page" id="page1">1</div>
+			<div class="page" id="page2">2</div>
+			<div class="page" id="page3">3</div>
+			<div class="page" id="page4">4</div>
+			<div class="page" id="page5">5</div>
+			<div class="page" id="page6">6</div>
+		
+		</div>		
+	</div>
+	<div id='op'>
+		<a href="javascript:next()">Next</a>&nbsp;&nbsp;&nbsp;<a href="javascript:prev()">Prev</a>
+	</div>
+ 
+</body>
+<script>
+var curindex=1;
+	function next(){
+			if(curindex==6){
+return;			}
+		var curpage=document.getElementById('page'+curindex);
+		curpage.style.transform='rotateX(-90deg)';
+		curindex++;
+		var nextpage=document.getElementById('page'+curindex);
+		nextpage.style.transform='rotateX(0deg)';
+	
+		
+
+	}
+
+	function prev(){
+	}
+</script>
+</html>

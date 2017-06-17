@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>web存储</title>
+</head>
+<body>
+	网站名:<input type='text' id='website'>
+	<br>
+	网站连接:<input type='text' id='url'>
+	<br>		
+	<button id='confirm'>确认</button>
+	<br>
+	网站名:<input type="text" id='search1'>
+	<br>
+	<div id="list"></div>
+	<button id="search" autocomplete>查询</button>
+</body>
+</html>
+<script>
+	(function(){
+		var confirm=document.getElementById('confirm'),
+			search=document.getElementById('search'),
+			website=document.getElementById('website'),
+			url=document.getElementById('url'),
+			search1=document.getElementById('search1'),
+			list=document.getElementById('list');
+			confirm.addEventListener('click',function(){
+				localStorage.setItem(website.value,url.value),
+				console.log(localStorage.website);
+				console.log(localStorage.getItem('website'));
+			});
+			search.addEventListener('click',function(){
+				list.innerHTML=localStorage.getItem(search1.value);
+				console.log(list)
+			})
+
+	})()
+</script>
