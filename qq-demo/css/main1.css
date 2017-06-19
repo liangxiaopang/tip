@@ -1,0 +1,194 @@
+.loginPanel{
+	width:380px;
+	height:247px;
+	left:400px;
+	top:120px;
+	position: absolute;
+	border: 1px solid #ccc;
+	background: #f6f6f6;
+	border-radius: 10px;
+	box-shadow: 0 0 8px #000;
+
+}
+.login_logo_webqq{
+	/*背景图的定位是相对所在的容器,也就是login_logo_webqq*/
+	background: url(../img/login_window_logo.png) no-repeat -200px 0px;
+	margin-left:100px;
+	margin-top:10px;
+	width:200px;
+	height:44px;
+	cursor: move;
+	/*border: 1px solid #000;*/
+}
+.inputs{
+	font:bold 16px arial;
+	margin-left:80px;
+	margin-top: 30px;
+}
+.inputs .sign-input{
+	padding-bottom: 20px;
+	/*border:1px solid red;*/
+}
+.inputs .sign-input input{
+	/*修改输入框的默认长度*/
+	/*input的默认高度是16或17px*/
+	width:170px;
+	border:1px solid #ccc;
+	border-radius: 10px;
+	color:#868686;
+	font-size: 16px;
+	padding: 4px;
+	outline:none;
+}
+.btn{
+	background:url(../img/login_btn.png) no-repeat -111px 0;
+	width:111px;
+	height: 36px;
+	text-align: center;
+	line-height: 20px;
+	color:#0c4e7c;
+	cursor:pointer;
+	margin-left:14px;
+	float:left;
+}
+.login-state-trigger{
+	cursor: pointer;
+	display: block;
+	/*float会脱离文档流但是保持自己的位置*/
+	float:left;
+	height:16px;
+	overflow: hidden;
+	width:120px;
+	margin:4px 0 0 0;
+}
+.login-state-trigger2{
+
+	margin:10px 0 0 20px;
+}
+.login-state-down{
+	background: url(../img/ptlogin.png) no-repeat 0 -22px;
+	height:6px;
+	width:7px;
+	float:left;
+	margin-top:5px;
+	overflow: hidden;
+	text-indent: -999em;
+}
+.login-state-show{
+	float:left;
+	margin-left:5px;
+	font-size: 12px;
+	line-height: 18px!important;
+}
+.login-state .callme{
+	background: url(../img/ptlogin,png) -72px 0 no-repeat;
+}
+.login-state .online{
+	background: url(../img/ptlogin,png) 0 0 no-repeat;
+}
+.login-state .away{
+	background: url(../img/ptlogin,png) -18px 0 no-repeat;
+}
+.login-state .busy{
+	background: url(../img/ptlogin,png) -36px 0 no-repeat;
+}
+.login-state .silent{
+	background: url(../img/ptlogin,png) -108px 0 no-repeat;
+}
+.login-state .hidden{
+	background: url(../img/ptlogin,png) --54px 0 no-repeat;
+}
+.statePanel{
+	display: none;
+	position: absolute;
+	right:68px;
+	top:193px;
+	z-index: 10px;
+	margin:0;
+	border-width:1px;
+	border-style: solid;
+	border-color: #ccc #6a6a6a #666 #cdcdcd;
+	padding: 0;
+	width:100px;
+	height:133px;
+	background-color: white;
+	overflow: hidden;
+	/*list-style: none;*/
+	font-size: 12px;
+	line-height: 1.5;
+}
+.statePanel .statePanel_li{
+	display: block;
+	float:left;
+	margin:0;
+	padding: 3px 0;
+	width: 100px;
+	height:16px;
+	line-height: 16px;
+	overflow: hidden;
+	zoom:1;
+	cursor:pointer;
+}
+.stateSelect_icon{
+	float: left;
+	margin:2px 0 0 5px;
+	width: 14px;
+	height:14px;
+	overflow: hidden;
+
+}
+.stateSelect_text{
+	margin: 0 0 0 22px;
+}
+.bottomDiv{
+	margin-left:70px;
+}
+.ui_boxyClose{
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	top:-8px;
+	right:-8px;
+	cursor: pointer;
+	background: url('../img/boxy_btn.png') no-repeat ;
+	z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>qq面板拖拽事件</title>
+</head>
+<body>
+<p>
+	1,先创建一个大的div作为整个最大的框架;一般都有和class和id,class用来坐css样式,id在js中用来获取对象.
+	2,所以命名都采用小驼峰写法,ime-mode不激活表示禁止输入中日韩文.
+	3,在input输入框里面用了两个html事件onfocus和onblur.
+</p>
+<!-- loginPanel是最大的框架 -->
+<div class='loginPanel' id='loginPanel'>
+<!-- 这个div的目的不知道是干嘛 -->
+	<div style='position:relative;z-index=1;'>
+		<div class='ui_boxyClose' id='ui_boxyClose'></div>
+	</div>
+	<div class="login_logo_webqq"></div>
+	<!-- 帐号和密码输入框 -->
+	<div class='inputs'>
+		<div class="sign-input"><span>帐 号: </span><span><input type="text" autocomplete='on' name='u' id='u' class='input01' tabindex='1' value='QQ号码或Email帐号' style='ime-mode: disabled;' onfocus='if(value=="QQ号码或Email帐号"){value=""}' onblur=if(value=" "){value="QQ号码或Email帐号"}></span></div>
+		<div class="sign-input"><span>密 码:</span><span><input type="password" name="p" id="p" maxlength="16" class="input01" tabindex="2" placeholder="******"></span></div>
+	</div>
+	<div class="bottomDiv">
+		<div class="btn" style="float:left;"></div>
+		<div>
+			<div id="loginState" class="login-state-trigger login-state-trigger2 login-state" title="选择登陆状态">
+			<div id="loginStateShow" class="loginStateShow onLine">状态</div>
+			<div class="login-state-down">下</div>
+			<div class="login-state-txt" id="login2qq_state_txt">在线</div>
+			<ul id="loginStatePanel" class="statePanel login-state" style='display: none;'>
+				<li id='online' class='statePanel_li'>
+					<div class="stateSelect_icon online"></div>
+					<div class="stateSelect_text">我在线上</div>
+				</li>
+				<li id='callme' class='statePanel_li'>
+					<div class="stateSelect_icon callme"></div>
+					<div class="stateSelect_text">Q我吧</div>
+				</li>
+				<li id='away' class='statePanel_li'>
+					<div class="stateSelect_icon away"></div>
+					<div class="stateSelect_text">离开</div>
+				</li>
+				<li id='busy' class='statePanel_li'>
+					<div class="stateSelect_icon busy"></div>
+					<div class="stateSelect_text">忙碌</div>
+				</li>
+				<li id='silent' class='statePanel_li'>
+					<div class="stateSelect_icon silent"></div>
+					<div class="stateSelect_text">请勿打扰</div>
+				</li>
+				<li id='hidden' class='statePanel_li'>
+					<div class="stateSelect_icon hidden"></div>
+					<div class="stateSelect_text">隐身</div>
+				</li>
+			</ul>
+			</div>		
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>
