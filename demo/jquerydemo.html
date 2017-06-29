@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery测试</title>
+	<style>
+		div,span{
+			width:100px;
+			height: 40px;
+			float:left;
+			padding: 10px;
+			margin: 10px;
+			background-color: #eee;
+		}
+	</style>
+</head>
+<body>
+	<div class='notme'>div class='notme'</div>
+	<div class="myclass">div class="myclass"</div>
+	<span class='myclass'>span class='myclass'</span>
+	
+</body>
+<script src='http://code.jquery.com/jquery-latest.js'></script>
+<script>
+	$('.myclass').css('border','3px solid red');
+</script>
+</html>

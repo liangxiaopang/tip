@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组去重</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var arr=[1,2,3,3,4,2,5,39,32,43,32];
+	function unique(array){
+		var result=[];
+		var l=array.length;
+		for (var i = 0; i < l; i++) {
+			for(var j=0;j<result.length;j++){
+				if(array[i]==result[j]){
+					break;
+				}
+			}
+			if(j==result.length){
+				result.push(array[i]);
+			}		
+		}
+		return result;
+	}
+	
+	function unique_indexof(array){
+		var result=[];
+		for(i=0;i<array.length;i++){
+			var current=array[i];
+			if(result.indexOf(current)==-1){
+				result.push(current);
+			}
+		}
+		return result;
+	}
+	console.log(unique_indexof(arr));
+</script>
+</html>

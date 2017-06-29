@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第一个vue</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+	<div id='app'>
+	<h1>Hello Vue!</h1>
+		<p>
+			<router-link to='/foo'>Go to foo</router-link>>
+			<router-link to='/bar'>Go to bar</router-link>>
+		</p>
+		<router-view></router-view>
+	</div>
+</body>
+<script>
+	const Foo={template:'<div>foo</div>'};
+	const Bar={template:'<div>bar</div>'};
+	const routes=[
+	{path:'/foo',component:Foo},
+	{path:'/bar',component:Bar}
+]
+const router=new VueRouter({
+	routes
+})
+const app=new Vue({
+	router
+}).$mount('#app')
+</script>
+</html>
