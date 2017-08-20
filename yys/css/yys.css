@@ -1,0 +1,195 @@
+body{
+	/*border:1px solid yellow;*/
+	margin:0px;
+	padding: 0px;
+	/*width:1200px;
+	height:1000px;*/
+	/*background-color: red;*/
+	/*background-position: 0 0;*/
+	background: url(../img/yys_bg.jpg) no-repeat 50% 0;
+	font-family: "微软雅黑";}
+h1{
+	width:960px;
+	margin-top:4px;
+	color:#fff;
+	font-size: 18px;
+	line-height: 25px;
+	font-weight: normal;
+	position: absolute;
+	margin-left:-480px;
+	left:50%;
+	z-index:1;
+	/*border:1px solid red;*/
+}
+.part-test{
+	height:850px; 
+	top:0px;
+	}
+.content-part{
+	position: absolute;
+	width:1200px;
+	left:50%;
+	margin-left:-600px;
+	margin-top:50px;
+	/*border:1px solid blue;*/
+}
+.content-part.show .content-title{
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 1s;
+}
+.part-test .content-title{
+	background: url(../img/yys_tese_title.png) no-repeat center;
+
+}
+.content-part .content-title{
+	opacity: 0;transform: translateY(50);
+}
+.content-part .content-title{
+	position: absolute;
+	width:650px;
+	height:263px;
+	top:0;
+	/*left:275px;*/
+	left:50%;
+	margin-left: -325px;
+	/*border: 1px solid white;*/
+}
+.part-test .shadow{
+	position: absolute;
+	width: 1014px;height: 190px;bottom: 0px;
+	left:50%;margin-left: -507px;background: url(../img/yys_tese_shadow.png);
+}
+.part-test.show .gallery_container{
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 1s 0.1s;
+}
+.part-test .gallery_container{
+	position: absolute;
+	width:1000px;
+	height:550px;
+	top:210px;
+	left:50%;
+	margin-left: -500px;
+	/*border:1px solid orange;*/
+}
+.part-test .gallery_container.st02{
+	top:800px;
+}
+.part-test .gallery_container{
+	opacity: 0.5;
+	transform: translateY(200px);
+
+}
+/*.gallery_container{
+	position: absolute;
+	top:0px;
+	left:0px;
+}*/
+.part-test .gallery_container .gallery_wrap{
+	width:720px;
+	height:520px;
+	/*border:1px solid yellow;*/
+}
+/*.gallery_container .gallery_wrap{
+	width:320px;
+	height:474px;
+	border:1px solid red;
+}*/
+.threeD_gallery_wrap{
+	position:absolute;
+	margin-left: -360px;
+	margin-top: -260px;
+	left:50%;
+	top:50%;
+	perspective: 1000px;
+	}
+.front_side{
+	z-index:5;
+	transform: rotateY(0) rotateX(0) rotateZ(0);
+	transform-style:preserve-3d;
+	/*只定义一个会怎样?没必要定义x和z的旋转啊*/
+}
+.threeD_gallery_item{
+	position: absolute;
+	width:100%;
+	height:100%;
+	cursor:pointer;
+	transition: all 0.5s ease;
+}
+.part-test .gallery_right_middle{
+	z-index:3;
+	transform-style:preserve-3d;
+	transform:rotateY(-30deg) translateX(200px) translateZ(-300px) scale(.6);
+}
+/*.gallery_right_middle{
+	z-index:3;
+	transform:rotateY(-55deg) translateX(90px) translateZ(-364px) scale(.95);
+}*/
+.gallery_out{
+	transform: rotateY(0) translateX(0) translateZ(0) scale(.6);
+}
+.part-test .gallery_left_middle{
+	z-index:3;
+	transform-style:preserve-3d;
+	transform:rotateY(30deg) translateX(-200px) translateZ(-300px) scale(.6);
+}
+/*.gallery_left_middle{
+	z-index:3;
+	transform:rotateY(55deg) translateX(-90px) translateZ(-364px) scale(.95);
+}*/
+.part-test .gallery_container .gallery_wrap img{width:100%;}
+.gallery_container .gallery_item img.show{
+	visibility: visible;
+}
+.gallery_container .gallery_item img{
+	width:100%;
+	height:100%;
+	visibility: hidden;
+}
+.part-test .gallery_container .gallery_wrap .line-b,.part-test .gallery_container .gallery_wrap .line-l,.part-test .gallery_container .gallery_wrap .line-r,.part-test .gallery_container .gallery_wrap .line-t{
+	position: absolute;
+	background: #fff;
+}
+.part-test .gallery_container .gallery_wrap .front_side .line-t{
+	width:700px;transition:all .2s .2s;
+}
+.part-test .gallery_container .gallery_wrap .line-t{
+	height: 1px;width:0px;top:10px;left:10px;
+}
+.part-test .gallery_container .gallery_wrap .front_side .line-r{
+	height:500px;transition:all .2s .4s;
+}
+.part-test .gallery_container .gallery_wrap .line-r{
+	height: 0px;width:1px;top:10px;right:10px;
+}
+.part-test .gallery_container .gallery_wrap .front_side .line-b{
+	width:700px;transition:all .2s .6s;
+}
+.part-test .gallery_container .gallery_wrap .line-b{
+	height: 1px;width:0px;bottom:10px;right:10px;
+}
+.part-test .gallery_container .gallery_wrap .front_side .line-l{
+	height:500px;transition:all .2s .8s;
+}
+.part-test .gallery_container .gallery_wrap .line-l{
+	height: 0px;width:1px;bottom:10px;left:10px;
+}
+.gallery_container .prev{left:0px;}
+.gallery_container .next{right:0px;}
+.gallery_container .prev,.gallery_container .next{
+	position: absolute;
+	top:15px;
+	width:140px;
+	height:520px;
+	z-index: 99;
+}
+
+
+
+
+
+
+
+

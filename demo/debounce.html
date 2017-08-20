@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>防抖</title>
+</head>
+<style>
+	body{
+		margin:0px;
+		padding: 0px;
+	}
+	#container{
+		width:80%;
+		height:200px;
+		line-height: 200px;
+		text-align: center;
+		color:#fff;
+		background-color: #444;
+		font-size:30px;
+		border:1px solid red;
+		margin:120px auto;
+		padding: 20px;
+	}
+</style>
+<body>
+	<div id="container">start</div>
+	<script>
+		var con=document.getElementById('container'),
+			count=0;
+		// function debounce(func,wait){
+		// 	var timer;	
+		// 	return function(){
+		// 		var _this=this;
+		// 			console.log(_this);
+		// 		if(timer){clearTimeout(timer);}
+		// 		timer=setTimeout(function(){
+		// 			func.apply(_this);
+		// 		},wait);
+		// 	}
+		// }
+		function debounce1(func,wait){
+			var timer;
+			if(timer) {clearTimeout(timer);}
+			timer=setTimeout(func,wait);
+			
+			return console.log('ouch');
+		}
+		function move(){
+			con.innerHTML=count++;
+		}
+		con.onmousemove=debounce1(move,400);
+		
+		// con.removeEventListener('mouseover',move)
+	</script>
+</body>
+</html>

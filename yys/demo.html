@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>阴阳师图片轮播插件</title>
+	<link rel="stylesheet" href="css/yys.css" type='text/css'>
+</head>
+<body>
+<h1>背景的position如果用的是百分比,则是图片宽度减去容器宽度乘以百分比,和别的position不一样.h1有个默认的margin值.</h1>
+<p>如果一个元素设置了绝对定位,有需要居中,可设置left50%,然后margin-left为自身宽度的-50%.或者left计算为本身元素和父元素的宽度差除于二</p>
+<p>虽然再body设置了宽度,但是背景还是以整个页面为计算尺寸来填充.当子元素没有脱离文档流的时候,参考尺寸是body的width,当元素脱离文档流之后,参考的尺寸是整个页面.</p>
+<!-- 总box -->
+	<div class="content-part part-test">
+		<!-- 标题效果 -->
+		<div class="content-title"></div>
+		<div class="shadow"></div>
+		<!-- 图片和按钮 -->
+		<div class="gallery_container">
+		<!-- 总图片框 -->
+		<div class="gallery_wrap threeD_gallery_wrap">
+		<!-- 四个图片轮播框 -->
+		<div href="javascript:;" class="gallery_item threeD_gallery_item gallery_left_middle" >
+			<img src="img/yys_banner1.jpg" class="show">
+			<div class="line-t"></div>
+			<div class="line-r"></div>
+			<div class="line-b"></div>
+			<div class="line-l"></div>
+		</div>
+		<div href="javascript:;" class="gallery_item threeD_gallery_item front_side" >
+			<img src="img/yys_banner2.jpg" class="show">
+			<div class="line-t"></div>
+			<div class="line-r"></div>
+			<div class="line-b"></div>
+			<div class="line-l"></div>
+		</div>
+		<div href="javascript:;" class="gallery_item threeD_gallery_item gallery_right_middle" >
+			<img src="img/yys_banner3.jpg" class="show">
+			<div class="line-t"></div>
+			<div class="line-r"></div>
+			<div class="line-b"></div>
+			<div class="line-l"></div>
+		</div>
+		<div href="javascript:;" class="gallery_item threeD_gallery_item gallery_out" >
+			<img src="img/yys_banner4.jpg" class="show">
+			<div class="line-t"></div>
+			<div class="line-r"></div>
+			<div class="line-b"></div>
+			<div class="line-l"></div>
+		</div>
+			
+		</div>
+		<!-- 轮播按钮 -->
+		<a href="javascript:;" class="prev"></a>
+		<a href="javascript:;" class="next"></a>
+			
+		</div>		
+	</div>
+	<!-- <script src="code.jquery.com/jquery-3.2.1.js"></script> -->
+	<script src='js/jquery.js'></script>
+	<script src='js/yys.js'></script>
+	<script>
+		$(function(){
+			$(".content-part").addClass('show');
+			$('.gallery_container').gallery_slider({imgNum:4});
+		})
+	</script>
+</body>
+</html>
