@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ziyemian</title>
+</head>
+<body>
+<h1>我是子页面</h1>
+<div id="appe"></div>
+</body>
+<script>
+    window.addEventListener('message',function(event) {
+        console.log(event.data);//输出
+        var mp=document.createElement('p');
+        var appe=document.getElementById('appe');
+        mp.innerText=event.data;
+        appe.appendChild(mp);
+        console.log(document.cookie);
+        console.log("hellol");
+    });
+</script>
+</html>
