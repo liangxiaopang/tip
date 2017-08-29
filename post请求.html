@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>几种post请求</title>
+</head>
+<body>
+	<div id="myDiv"></div>
+</body>
+<script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js'></script>
+<script>
+	var xhr=new XMLHttpRequest();
+	var mess={
+          'appid': 5,
+          'account': 'liang',
+          'password': '123456',
+          'nickname': 'xiaopang',
+          'u_h_img': "http://prj0img.oss-cn-hangzhou.aliyuncs.com/temp/1_150111080328_19.jpg",
+          'sex': 0,
+          'ext_user_info': '{}'
+    	}
+    	xhr.onreadystatechange=function()
+  {
+  if (xhr.readyState==4 && xhr.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xhr.responseText;
+    }
+  }
+    xhr.open('POST','http://im.shuzp.top/index/index/userRegister');
+    // xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xhr.send(mess);
+ // var url='http://im.shuzp.top/index/index/userRegister';
+ // var data={
+ //          'appid': 5,
+ //          'account': 'liangpuhui',
+ //          'password': '123456',
+ //          'nickname': 'xiaopang',
+ //          'u_h_img': "http://prj0img.oss-cn-hangzhou.aliyuncs.com/temp/1_150111080328_19.jpg",
+ //          'sex': 0,
+ //          'ext_user_info': '{}'
+ //    	};
+ //    	function show(res){
+ //    		console.log(res)
+ //    	};
+// $.post(url,data,show)
+//  $.ajax({
+//   type: "POST",
+//   url: url,
+//   data: data,
+//   success: show,
+//   dataType: dataType
+// });
+
+
+</script>
+</html>
