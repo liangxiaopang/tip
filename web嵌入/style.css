@@ -1,0 +1,8 @@
+.nid{
+    width:350px;
+    height:500px;
+    border:1px solid red;;
+    position:absolute;
+    right:5px;
+    bottom:5px;
+}
