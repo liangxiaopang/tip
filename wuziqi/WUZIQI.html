@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>五子棋</title>
+	<link rel="stylesheet" href="wuziqi.css">
+</head>
+<body>
+	<canvas id='chess' width='450px' height="450px"></canvas>
+	<p>使用canvas绘制适量图形,先获取canvas标签,然后getContext('2d')设置绘制的资格.</p>
+	<p>绘制矩形:fillRect,clearRect,strokeRect(起点,起点,宽,高)</p>
+	<p>绘制路径:1,ctx.beginPath();2,绘制路径;3,使用moveTo()移动笔触;4,使用fill()或者stroke()完成路径填充.</p>
+	<p>绘制路径:lineTo(线段端点xy);arc(x,y,半径,起始角度,终点角度,逆时针(t)	)</p>
+	<p>样式和颜色:ctx.fillStyle('color')和ctx.strokeStyle('color')预先设置填充或者边框的颜色,然后再画路径.</p>
+</body>
+<script src='wuziqi.js'></script>
+</html>
